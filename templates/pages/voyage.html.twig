@@ -8,13 +8,17 @@
             <h3>{{ visite.pays }}</h3>
             <h2>Note : {{ visite.note }}/20</h2>
             <h5 class="mt-5">Température entre {{ visite.tempmin }}°C et {{ visite.tempmax }}°C</h5>
+            <p class="mt-5"><strong>Environnements</strong></p>
+            {% for environnement in visite.environnements %}
+                {{ environnement.nom }}
+            {% endfor %}
         </div>
         <div class="col">
             <!-- emplacement photo -->
         </div>
         <div class="row mt-5">
             <div class="col md-12">
-                <p><strong>Avis :</strong></p>
+                <p><strong>Avis</strong></p>
                 <p>{{ visite.avis }}</p>
             </div>
         </div>
